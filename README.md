@@ -8,7 +8,6 @@ NEXUS is a modular AI engineering platform for building, evaluating, and operati
 
 ## Architecture
 
-```text
                          ┌───────────────────────┐
                          │     Applications      │
                          │      API / UI / SDK   │
@@ -48,7 +47,6 @@ NEXUS is a modular AI engineering platform for building, evaluating, and operati
                   │          Observability             │
                   │      Logs • Metrics • Traces       │
                   └────────────────────────────────────┘
-```
 
 ---
 
@@ -69,7 +67,6 @@ NEXUS is a modular AI engineering platform for building, evaluating, and operati
 
 ## Project Structure
 
-```text
 NEXUS/
 ├── apps/              # Application and API entry points
 ├── core/              # Core abstractions and configuration
@@ -89,7 +86,6 @@ NEXUS/
 ├── scripts/            # Utility scripts
 ├── infrastructure/    # Infrastructure and deployment
 └── docs/              # Technical documentation
-```
 
 ---
 
@@ -113,34 +109,26 @@ NEXUS/
 
 ### Clone
 
-```bash
 git clone <repository-url>
 cd NEXUS
-```
+
 
 ### Environment
 
-```bash
 python -m venv .venv
-```
 
 **Windows:**
 
-```bash
 .venv\Scripts\activate
-```
+
 
 **Linux / macOS:**
 
-```bash
 source .venv/bin/activate
-```
 
 ### Install Dependencies
 
-```bash
 pip install -r requirements.txt
-```
 
 Create `.env` from `.env.example` and configure the required environment variables.
 
@@ -148,7 +136,6 @@ Create `.env` from `.env.example` and configure the required environment variabl
 
 ## Development Workflow
 
-```bash
 git switch main
 git pull
 
@@ -162,7 +149,6 @@ git add .
 git commit -m "Implement <feature>"
 
 git push -u origin feature/<feature-name>
-```
 
 Submit the branch through a Pull Request for review.
 
