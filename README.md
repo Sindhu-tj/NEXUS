@@ -112,7 +112,6 @@ NEXUS/
 git clone <repository-url>
 cd NEXUS
 
-
 ### Environment
 
 python -m venv .venv
@@ -120,7 +119,6 @@ python -m venv .venv
 **Windows:**
 
 .venv\Scripts\activate
-
 
 **Linux / macOS:**
 
