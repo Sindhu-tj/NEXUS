@@ -51,6 +51,7 @@ NEXUS is a modular AI engineering platform for building, evaluating, and operati
 
 ---
 
+
 ## Key Capabilities
 
 * **LLM Infrastructure** — provider abstraction and model integration
@@ -65,6 +66,7 @@ NEXUS is a modular AI engineering platform for building, evaluating, and operati
 * **Multimodal AI** — support for multimodal processing and inference
 
 ---
+
 
 ## Project Structure
 
@@ -91,6 +93,7 @@ NEXUS/
 ---
 
 ## Tech Stack
+
 
 | Category        | Technologies           |
 | --------------- | ---------------------- |
