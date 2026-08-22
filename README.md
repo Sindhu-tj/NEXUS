@@ -10,7 +10,6 @@ It provides reusable components for **LLM integration, model routing, RAG, AI ag
 
 ## Architecture
 
-```text
                            Applications
                          API / UI / SDK
                                 │
