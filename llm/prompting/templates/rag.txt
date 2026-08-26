@@ -1,0 +1,17 @@
+Set-Content -Path "llm/prompting/templates/rag.txt" -Value @"
+Use the provided context to answer the user's question.
+
+Instructions:
+- Answer only using the provided context when the question depends on retrieved information.
+- Do not invent information that is not supported by the context.
+- If the context does not contain enough information, clearly state that.
+- Keep the answer accurate, relevant, and concise.
+
+Context:
+{context}
+
+Question:
+{question}
+
+Answer:
+"@

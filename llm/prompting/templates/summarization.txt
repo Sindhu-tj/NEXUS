@@ -1,0 +1,15 @@
+Set-Content -Path "llm/prompting/templates/summarization.txt" -Value @"
+Summarize the following content accurately and concisely.
+
+Instructions:
+- Preserve the key facts and important details.
+- Remove unnecessary repetition.
+- Do not add information that is not present in the content.
+- Use clear and structured language.
+- Keep the summary focused on the main points.
+
+Content:
+{content}
+
+Summary:
+"@
