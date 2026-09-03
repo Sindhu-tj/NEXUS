@@ -65,6 +65,6 @@ NEXUS/
 ├── multimodal/        # Multimodal AI
 ├── database/          # Data persistence
 ├── tests/             # Automated tests
-├── scripts/           # Utility scripts
+├── scripts/           # utility scripts
 ├── infrastructure/    # Infrastructure and deployment
 └── docs/              # Technical documentation
