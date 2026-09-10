@@ -68,3 +68,5 @@ NEXUS/
 ├── scripts/           # utility scripts
 ├── infrastructure/    # Infrastructure and deployment
 └── docs/              # Technical documentation
+
+<!-- NEXUS development update -->
