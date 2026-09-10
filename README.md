@@ -70,3 +70,5 @@ NEXUS/
 └── docs/              # Technical documentation
 
 <!-- NEXUS development update -->
+### Development
+NEXUS is continuously evolving with new LLM capabilities.
