@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navigation = [
   "Dashboard",
@@ -15,11 +15,27 @@ const navigation = [
 
 export default function Home() {
   const [active, setActive] = useState("Dashboard");
+  const [apiStatus, setApiStatus] = useState("Checking API connection...");
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/health")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("API unavailable");
+        }
+        return response.json();
+      })
+      .then(() => {
+        setApiStatus("Connected to NEXUS API");
+      })
+      .catch(() => {
+        setApiStatus("API offline");
+      });
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#080808] text-white flex">
-      {/* Sidebar */}
-      <aside className="w-64 border-r border-white/10 bg-[#0b0b0b] p-6 hidden md:block">
+      <aside className="w-64 border-r border-white/10 bg-[#0b0b0b] p-6 hidden md:block relative">
         <div className="mb-10">
           <h1 className="text-2xl font-bold tracking-tight">NEXUS</h1>
           <p className="text-xs text-gray-500 mt-1">
@@ -48,9 +64,7 @@ export default function Home() {
         </div>
       </aside>
 
-      {/* Main */}
       <main className="flex-1">
-        {/* Header */}
         <header className="h-20 border-b border-white/10 flex items-center justify-between px-8">
           <div>
             <p className="text-sm text-gray-500">Workspace</p>
@@ -59,8 +73,16 @@ export default function Home() {
 
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2 text-sm text-gray-400">
-              <span className="w-2 h-2 rounded-full bg-green-500" />
-              System Operational
+              <span
+                className={`w-2 h-2 rounded-full ${
+                  apiStatus === "Connected to NEXUS API"
+                    ? "bg-green-500"
+                    : apiStatus === "API offline"
+                      ? "bg-red-500"
+                      : "bg-yellow-500"
+                }`}
+              />
+              {apiStatus}
             </div>
 
             <button className="border border-white/10 rounded-lg px-4 py-2 text-sm hover:bg-white/5">
@@ -69,7 +91,6 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Content */}
         <section className="p-8 max-w-7xl mx-auto">
           <div className="mb-10">
             <p className="text-xs tracking-[0.3em] text-gray-500 mb-4">
@@ -88,7 +109,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
             <Stat title="LLM Providers" value="0" />
             <Stat title="Active Agents" value="0" />
@@ -96,7 +116,6 @@ export default function Home() {
             <Stat title="Evaluations" value="0" />
           </div>
 
-          {/* Platform modules */}
           <div>
             <div className="flex items-center justify-between mb-5">
               <h2 className="text-xl font-semibold">Platform Modules</h2>
@@ -104,45 +123,15 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Module
-                number="01"
-                title="Models"
-                description="Model providers, routing, configuration and inference."
-              />
-
-              <Module
-                number="02"
-                title="RAG"
-                description="Retrieval pipelines, embeddings, vector search and generation."
-              />
-
-              <Module
-                number="03"
-                title="Agents"
-                description="Agent orchestration, tools, memory and execution."
-              />
-
-              <Module
-                number="04"
-                title="Documents"
-                description="Document ingestion, processing and knowledge management."
-              />
-
-              <Module
-                number="05"
-                title="Evaluation"
-                description="Quality evaluation, benchmarks and performance analysis."
-              />
-
-              <Module
-                number="06"
-                title="Monitoring"
-                description="Logs, metrics, tracing, latency and system observability."
-              />
+              <Module number="01" title="Models" description="Model providers, routing, configuration and inference." />
+              <Module number="02" title="RAG" description="Retrieval pipelines, embeddings, vector search and generation." />
+              <Module number="03" title="Agents" description="Agent orchestration, tools, memory and execution." />
+              <Module number="04" title="Documents" description="Document ingestion, processing and knowledge management." />
+              <Module number="05" title="Evaluation" description="Quality evaluation, benchmarks and performance analysis." />
+              <Module number="06" title="Monitoring" description="Logs, metrics, tracing, latency and system observability." />
             </div>
           </div>
 
-          {/* System status */}
           <div className="mt-8 border border-white/10 rounded-xl p-6 bg-white/[0.02]">
             <div className="flex items-center justify-between">
               <div>
@@ -152,8 +141,16 @@ export default function Home() {
                 </p>
               </div>
 
-              <span className="text-sm text-yellow-500">
-                Waiting for API connection
+              <span
+                className={`text-sm ${
+                  apiStatus === "Connected to NEXUS API"
+                    ? "text-green-500"
+                    : apiStatus === "API offline"
+                      ? "text-red-500"
+                      : "text-yellow-500"
+                }`}
+              >
+                {apiStatus}
               </span>
             </div>
           </div>
