@@ -3,183 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --nexus-bg: #080808;
-  --nexus-surface: #0b0b0b;
-  --nexus-card: #111111;
-  --nexus-border: rgba(255, 255, 255, 0.1);
-  --nexus-border-hover: rgba(255, 255, 255, 0.18);
-  --nexus-text: #ffffff;
-  --nexus-muted: #737373;
-  --nexus-subtle: #525252;
+  color-scheme: dark;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   margin: 0;
-  padding: 0;
-  background: var(--nexus-bg);
-  color-scheme: dark;
-  scroll-behavior: smooth;
+  min-height: 100%;
+  background: #080808;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   min-height: 100vh;
-  background:
-    radial-gradient(
-      circle at 50% -20%,
-      rgba(255, 255, 255, 0.045),
-      transparent 35%
-    ),
-    var(--nexus-bg);
-  color: var(--nexus-text);
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-::selection {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #080808;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #3a3a3a;
-}
-
+button,
 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
   font: inherit;
-}
-
-button:focus-visible,
-a:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.5);
-  outline-offset: 3px;
-}
-
-.nexus-border {
-  border: 1px solid var(--nexus-border);
-}
-
-.nexus-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--nexus-border);
-  border-radius: 14px;
-  transition:
-    background 180ms ease,
-    border-color 180ms ease,
-    transform 180ms ease,
-    box-shadow 180ms ease;
-}
-
-.nexus-card:hover {
-  background: rgba(255, 255, 255, 0.035);
-  border-color: var(--nexus-border-hover);
-}
-
-.nexus-glass {
-  background: rgba(11, 11, 11, 0.75);
-  border: 1px solid var(--nexus-border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-.nexus-status {
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: #22c55e;
-  box-shadow: 0 0 12px rgba(34, 197, 94, 0.45);
-}
-
-.nexus-grid {
-  background-image:
-    linear-gradient(
-      rgba(255, 255, 255, 0.025) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.025) 1px,
-      transparent 1px
-    );
-  background-size: 40px 40px;
-}
-
-.nexus-label {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--nexus-muted);
-}
-
-.nexus-muted {
-  color: var(--nexus-muted);
-}
-
-@keyframes nexus-fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes nexus-slide {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.nexus-fade {
-  animation: nexus-fade 0.5s ease-out;
-}
-
-.nexus-slide {
-  animation: nexus-slide 0.5s ease-out;
-}
-
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
 }
