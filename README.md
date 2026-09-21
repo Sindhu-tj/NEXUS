@@ -51,6 +51,7 @@ NEXUS is a modular platform for building, evaluating, and operating LLM-powered 
 
 
 NEXUS/
+
 ├── apps/              # Application and API entry points
 ├── core/              # Core abstractions and configuration
 ├── llm/               # LLM providers and model interfaces
