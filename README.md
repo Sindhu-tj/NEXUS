@@ -72,5 +72,5 @@ NEXUS/
 
 <!-- NEXUS development update -->
 
-### Development
+## Development
 NEXUS is continuously evolving with new LLM capabilities.
