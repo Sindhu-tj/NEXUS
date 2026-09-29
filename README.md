@@ -60,7 +60,7 @@ NEXUS/
 ├── evaluation/        # Evaluation framework
 ├── benchmarks/        # Performance benchmarks
 ├── security/          # Security and guardrails
-├── optimization/      # Performance and cost optimization
+├── optimization/      # Performance and cost optimization.
 ├── observability/     # Logs, metrics, and tracing
 ├── multimodal/        # Multimodal AI
 ├── database/          # Data persistence
