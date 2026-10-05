@@ -3,9 +3,9 @@
 
 ### Modular LLM Engineering Platform
 
-NEXUS is a modular platform for building, evaluating, and operating LLM-powered systems with RAG, AI agents, model routing, tool calling, evaluation, security, and observability
+NEXUS is a modular platform for building, evaluating, and operating LLM-powered systems with RAG, AI agents, model routing, tool calling, evaluation, security, and observability.
 
----
+----
 ## ARECHITURE
 
 
