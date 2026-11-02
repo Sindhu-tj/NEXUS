@@ -67,7 +67,7 @@ NEXUS is a modular platform for building, evaluating, and operating LLM-powered 
 ├── tests/             # Automated tests
 ├── scripts/           # utility scripts
 ├── infrastructure/    # Infrastructure and deployment
-└── docs/              # Technical documentation
+└── docs/              # Technical documentation.
 
 
 <!-- NEXUS development update -->
