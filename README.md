@@ -61,7 +61,7 @@ NEXUS is a modular platform for building, evaluating, and operating LLM-powered 
 ├── benchmarks/        # Performance benchmarks.
 ├── security/          # Security and guardrails.
 ├── optimization/      # Performance and cost optimization.
-├── observability/     # Logs, metrics, and tracing
+├── observability/     # Logs, metrics, and tracing.
 ├── multimodal/        # Multimodal AI.
 ├── database/          # Data persistence.
 ├── tests/             # Automated tests
