@@ -54,7 +54,7 @@ NEXUS is a modular platform for building, evaluating, and operating LLM-powered 
 ├── core/              # Core abstractions and configuration
 ├── llm/               # LLM providers and model interfaces
 ├── model_router/      # Model selection and routing.
-├── agents/            # Agent runtime and orchestration
+├── agents/            # Agent runtime and orchestration.
 ├── rag/               # Retrieval-Augmented Generation.
 ├── tools/             # Tool interfaces and execution.
 ├── evaluation/        # Evaluation framework.
